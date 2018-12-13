@@ -12,24 +12,35 @@ def main():
     # Get principal and interest rate
     #principal = float(input("Enter the initial principal:"))
     #apr = float(input("Enter the annualized interest rate:"))
+
+    #opens a input window
+    
+    win = GraphWin("input", 400, 300)
+    win.setCoords(0.0, 0.0, 3.0, 4.0)
+    Text(Point(1, 3), "initial principal:").draw(win)
+    Text(Point(1, 1), "annualized interest:").draw(win)
+    inputTextp = Entry(Point(2.25, 3), 5)
+    inputTextp.draw(win)
+    inputTexta = Entry(Point(2.25, 1), 5)
+    inputTexta.draw(win)
+    button = Text(Point(1.5, 2.0), "enter")
+    button.draw(win)
+    Rectangle(Point(1, 1.5), Point(2, 2.5)).draw(win)
+
+    win.getMouse()
     
     # Create a graphics window with labels on left edge
     win = GraphWin("Investment Growth Chart", 320, 240)
     win.setBackground("white")
-    inputBox = Entry(Point(100, 100), 5)
-    inputBox.draw(win)
-    inputBox2 = Entry(Point(100, 100), 5)
-    inputBox.move(0, 25)
-    inputBox2.draw(win)
     Text(Point(20, 230), ' 0.0K').draw(win)
     Text(Point(20, 180), ' 2.5K').draw(win)
     Text(Point(20, 130), ' 5.0K').draw(win)
     Text(Point(20, 80), ' 7.5K').draw(win)
     Text(Point(20, 30), '10.0K').draw(win)
-
+    
     # Draw bar for initial principal
-    principal1 = inputBox.getText()
-    apr1 = inputBox.getText()
+    principal1 = inputTextp.getText()
+    apr1 = inputTexta.getText()
     principal = float(principal1)
     apr = float(apr1)
     height = principal * 0.02
