@@ -6,14 +6,18 @@ def main():
     dateStr = input("Enter a date (mm/dd/yyyy): ")
 
     # split into components
-    monthStr, dayStr, yearStr = dateStr.split("/")
-
+    #monthStr, dayStr, yearStr = dateStr.split("/")
+    mm = dateStr[0:2]
+    dd = dateStr[3:5]
+    yyyy = dateStr[6:10]
     # convert monthStr to the month name
     months = ["January", "February", "March", "April",
               "May", "June", "July", "August",
               "September", "October", "November", "December"]
    
-    monthStr = months[int(monthStr) - 1]
+    monthStr = months[int(mm)-1]
+    dayStr = dd
+    yearStr = yyyy
 
     # output result in month day , year format
     print("The converted date is: ", monthStr, dayStr + ",", yearStr)
