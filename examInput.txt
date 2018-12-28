@@ -1,0 +1,16 @@
+number of students: 13
+
+<last name> ;<grade>
+Grimsley ;77
+Amell ;99
+Some ;14
+One ;1
+Who ;67
+I ;73
+Dont ;44
+Know ;2
+Bird ;100
+Kat ;100
+Fish ;3
+Dirt ;59
+Trashivs ;89
